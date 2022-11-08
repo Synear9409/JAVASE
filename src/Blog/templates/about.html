@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+    <!-- 导航 -->
+    <nav class="ui inverted attached segment m-padded-tb-mini">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">Synear</h2>
+                <a href="#" class="item m-mobile-hide"><i class="small home icon"></i>首页</a>
+                <a href="#" class="item m-mobile-hide"><i class="small idea icon"></i>分类</a>
+                <a href="#" class="item m-mobile-hide"><i class="small tags icon"></i>标签</a>
+                <a href="#" class="item m-mobile-hide"><i class="small clone icon"></i>归档</a>
+                <a href="#" class="active item m-mobile-hide"><i class="small info icon"></i>关于我</a>
+                <div class="right item m-mobile-hide">
+                    <div class="ui icon inverted transparent input">
+                        <input type="text" name="" id="" placeholder="search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <!-- 中间内容 -->
+    <div class="m-container m-padded-tb-big">
+        <div class="ui container">
+            <div class="ui stackable grid">
+                <div class="eleven wide column">
+                    <div class="ui segment">
+                        <img src="../static/images/about.jpg" alt="" class="ui rounded image">
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <div class="ui top attached segment">
+                        <div class="ui header">关于我</div>
+                    </div>
+                    <div class="ui attached segment">
+                        <p class="m-text">Synear,一个折腾在0和1世界里的小伙；一个终生学习者，希望结识更多在编程以及生活上共同成长的伙伴。</p>
+                        <p class="m-text">热爱编程，喜欢折腾，正在探索学习高效学习编程技术的方法...</p>
+                    </div>
+                    <div class="ui attached segment">
+                        <div class="ui orange basic label">编程</div>
+                        <div class="ui red basic label">思考</div>
+                        <div class="ui teal basic label">运动</div>
+                        <div class="ui blue basic label">旅游</div>
+                    </div>
+                    <div class="ui attached segment">
+                        <div class="ui orange basic label left pointing m-margin-tb-tiny m-margin-lr-small">Java</div>
+                        <div class="ui red basic label left pointing m-margin-tb-tiny m-margin-lr-small">Linux</div>
+                        <div class="ui teal basic label left pointing m-margin-tb-tiny m-margin-lr-small">MySql</div>
+                        <div class="ui blue basic label left pointing m-margin-tb-tiny m-margin-lr-small">Redis</div>
+                        <div class="ui yellow basic label left pointing m-margin-tb-tiny m-margin-lr-small">JavaScript</div>
+                        <div class="ui black basic label left pointing m-margin-tb-tiny m-margin-lr-small">...</div>
+                    </div>
+                    <div class="ui bottom attached segment">
+                        <a href="https://github.com/Synear9409" class="ui circular icon button"><i class="black github icon"></i></a>
+                        <a href="#" class="ui qq circular icon button" data-content="QQ：1521367847" data-position="bottom center"><i class="blue qq icon"></i></a>
+                        <a href="#" class="ui wechat circular icon button"><i class="green weixin icon"></i></a>
+                    </div>
+                    <div class="ui flowing weixin-qr popup transition hidden">
+                        <img src="../static/images/mine.jpg" alt="" class="ui rounded image" style="width: 120px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <!-- 底部 -->
+    <footer class="ui inverted vertical segment m-padded-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/mine.jpg" alt="" class="ui rounded image" style="width: 110px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-text-lined">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">用户故事</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-text-lined">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email：synear_chen@qq.com</a>
+                        <a href="#" class="item">QQ：1521367847</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-text-lined">Synear</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">Since columns use padding to create gutters, content stylings should not be applied directly to columns, but to elements inside of columns.</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2020-2021 Designed by Synear. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+    $(".menu.toggle").click(function(){
+        $(".stackable.menu").children().not("h2").toggleClass('m-mobile-hide')
+    })
+    // qq
+    $('.qq').popup();
+    //微信
+    $(".wechat").popup({
+        popup : $('.weixin-qr'),
+        position : 'bottom center' 
+    })
+</script>
+</body>
+</html>
