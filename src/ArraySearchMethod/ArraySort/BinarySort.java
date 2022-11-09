@@ -1,8 +1,5 @@
 package ArraySearchMethod.ArraySort;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 /**
  * @author SynearChen
  * @version 1.0
@@ -22,9 +19,10 @@ public class BinarySort {
         int left = 0, right = num.length - 1, middle;
         while (left <= right) {
 //            middle = (left + right) / 2;  // 会出现数据溢出问题
+//            middle = left + (right - left) / 2;
 //            解决办法1：(l + r) / 2  ==> l/2 + r/2 ==> l + (-l/2 + r/2) ==> l + (r - l) / 2
-//            解决办法2：
-            middle = left + (right - left) / 2;
+//            解决办法2：(l + r) >>> 1
+            middle = (left + right) >>> 1;
             if (num[middle] == target) {
                 return middle;
             }else if (num[middle] > target) {
