@@ -7,6 +7,7 @@ import java.util.stream.Stream;
 public interface IBaseEnum<T> {
 
     default void initEnum(T code, String msg) {
+        System.out.println("执行顺序2");
         EnumContainer.putEnum(this, code, msg);
     }
 
@@ -23,7 +24,7 @@ public interface IBaseEnum<T> {
      */
     @SuppressWarnings("unchecked")
     static <T, R extends IBaseEnum<T>> R getByCode(Class<? extends IBaseEnum<T>> clazz, T code) {
-        IBaseEnum<T>[] enumConstants = clazz.getEnumConstants();
+        System.out.println("执行顺序1");
         return Stream.of(clazz.getEnumConstants())
                 .filter(f -> f.getCode().equals(code))
                 .map(v -> (R) v)

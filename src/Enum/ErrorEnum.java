@@ -7,7 +7,7 @@ package Enum;
  * @description: 异常枚举
  */
 
-public enum ErrorEnum {
+public enum ErrorEnum implements IBaseEnum<String>{
 
     FAIL("0", "请求失败"),
     SUCCESS("1", "请求成功"),
@@ -36,21 +36,10 @@ public enum ErrorEnum {
     AUDIT_NODE_ERROR("701", "审核节点出现异常！"),
     ;
 
-    private final String errCode;
-    private final String errMsg;
-
     ErrorEnum(String errCode, String errMsg) {
-        this.errCode = errCode;
-        this.errMsg = errMsg;
+        initEnum(errCode, errMsg);
     }
 
-    public String getErrCode() {
-        return errCode;
-    }
-
-    public String getErrMsg() {
-        return errMsg;
-    }
 
     public static String getNameForValue(String v) {
         ErrorEnum[] values = ErrorEnum.values();
@@ -59,7 +48,7 @@ public enum ErrorEnum {
         for (ErrorEnum value :
                 values) {
             enumValue = value;
-            if (enumValue.getErrMsg().equals(v)) {
+            if (enumValue.getMessage().equals(v)) {
                 return value.name();
             }
         }
